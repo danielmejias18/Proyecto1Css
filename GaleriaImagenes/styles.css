@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: static;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin: 0 10px;
+    position: relative; /* Añadido posicionamiento relativo */
+
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex; 
+    align-items: center;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-item::after { 
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: var(rgb(16, 0, 235));
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    visibility: hidden; /* Añadido para ocultar inicialmente la barra */
+}
+
+.navbar-item:hover::after { /* Aplica el efecto hover al pseudo-elemento ::after */
+    width: 100%;
+    background: var(rgb(16, 0, 235));
+    visibility: visible; 
+}
+
+
+#contenedorImagenes{
+    display: grid;
+    gap: 25px;
+    width: 100%;
+    height: 750px;
+    background-color:#333;
+    grid-template-columns: repeat(3, 1fr); 
+    padding: 20px;
+    position: absolute;
+    background: linear-gradient(to bottom right, #333333, #666666);
+
+    
+    
+
+
+
+}
+.imagenes{
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+
+   
+}
+.imagenes:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: #333333;
+    color: #fff;
+    padding: 10px 0;
+    bottom: 0; 
+    left: 0; 
+     
+    position: fixed;
+   
+
+}
+
+.imagenes p{
+    text-align: center;
+    color: #fff;
+    
+}
+.imagenes img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+      object-position: center center;
+}
